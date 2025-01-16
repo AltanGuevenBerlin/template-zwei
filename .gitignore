@@ -1,0 +1,13 @@
+#Allgemeine gitignore
+.idea
+
+#Backend
+backend/target/
+backend/!.mvn/wrapper/maven-wrapper.jar
+backend/!**/src/main/**/target/
+backend/!**/src/test/**/target/
+
+#Frontend
+frontend/node_modules
+frontend/dist
+
