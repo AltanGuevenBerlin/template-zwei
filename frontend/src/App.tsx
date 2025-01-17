@@ -1,27 +1,25 @@
 import './App.css'
-import axios = require("axios");
+import axios from "axios";
 import {useEffect, useState} from "react";
+import GroceryshopGallery from "./GroceryshopGallery.tsx";
 
 function App() {
 
-    const[value, setValue] = useState<string("")
+    const[value, setValue] = useState<Groceryshop[]>([])
 
     function getHello() {
         axios.get("/api/groceryshop")
             .then(response => setValue(response.data))
-
     }
 
     useEffect(() => {
         getHello()
-    },[])
+    }, [])
 
   return (
     <>
-        <h1>(value</h1>
-
+        <GroceryshopGallery/>
     </>
   )
 }
-
 export default App
